@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Bash script to display a list of currently running processes
+
+# Display headers
+echo "USER        PID  PPID  %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
+
+# Use ps command to list all processes
+ps aux --forest

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Bash script to display lines containing the word "bash"
+
+# shellcheck disable=SC2009
+# The next line is used to find the PID of the running Bash process
+ps aux | grep bash
