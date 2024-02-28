@@ -1,0 +1,4 @@
+- Termination of SSL at Load Balancer Level: Terminating SSL at the load balancer level can expose decrypted traffic between the load balancer and servers, potentially compromising security.
+- Single MySQL Server for Writes: Having only one MySQL server capable of accepting writes creates a single point of failure. If the server fails, it can lead to downtime or data loss.
+- Homogeneous Servers: Having servers with all the same components (database, web server, and application server) might lead to a lack of diversity and increase the impact of failures or vulnerabilities affecting all servers simultaneously.
+

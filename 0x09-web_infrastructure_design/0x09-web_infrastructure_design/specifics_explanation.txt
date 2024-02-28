@@ -1,0 +1,6 @@
+- Firewalls: Firewalls are added to control incoming and outgoing network traffic, protecting the servers from unauthorized access, DDoS attacks, and other security threats. We add three firewalls for redundancy and distributed security.
+- HTTPS Traffic: HTTPS encrypts data transmitted between the user's browser and the web server, providing confidentiality and integrity. This is crucial for protecting sensitive information such as user credentials, personal data, and financial transactions.
+- Monitoring: Monitoring is used to track the health, performance, and availability of the infrastructure. By adding three monitoring clients, we ensure redundancy and distributed data collection, allowing for better fault tolerance and resilience.
+- Monitoring Tool: The monitoring tool collects data by periodically querying server metrics, logs, and other relevant information. It may use agents installed on each server to collect data, or it may collect data remotely using APIs or other methods.
+- Monitoring QPS: To monitor the web server's QPS (Queries Per Second), we can configure the monitoring tool to track the number of incoming HTTP requests over time. This involves setting up monitoring alerts or dashboards to visualize and analyze QPS trends and anomalies.
+
