@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Correct and secure permissions
+chmod 644 /etc/nginx/nginx.conf
+chown root:root /etc/nginx/nginx.conf
+
+# Update Nginx configuration to listen on port 8080
+if [ -f /etc/nginx/sites-available/default ]; then
+    sed -i "s/listen 80;/listen 8080;/g" /etc/nginx/sites-available/default
+fi
+
+# Gracefully stop Apache if it's running
+if systemctl is-active --quiet apache2; then
+    systemctl stop apache2
+fi
+
+# Start or restart Nginx as the nginx user
+systemctl restart nginx
+
+# Check the status of Nginx to ensure it's running
+systemctl status nginx
+
